@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.App{
+    display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+form{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+button{
+    color: red;
+    background-color: lime;
+    font-family: 'Courier New', Courier, monospace;
+    height: 45px;
+    width: 300px;
+    background-color: #4CAF50; /* Green */
+  border: none;
   color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+button:hover {
+    background-color: #555555;
+    color: white;
+  }
+input{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid limegreen ;
+    width: 400px;
+    height: 25px;
+}
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    color: lime;
+    text-align: center;
+    font-size: 15px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h3 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 4.5s steps(40, end),
+      blink-caret .75s step-end infinite;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 30% }
   }
-}
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
